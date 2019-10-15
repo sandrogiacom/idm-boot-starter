@@ -1,0 +1,20 @@
+info:
+  app:
+    name: demo
+    description: Idm Demo
+management:
+  endpoint:
+    info:
+      enabled: true
+    health:
+      enabled: true
+    metrics:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: info,health,metrics
+      base-path: /
+  health:
+    elasticsearch:
+      enabled: false
